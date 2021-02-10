@@ -1,0 +1,7 @@
+Training Wheels Plugin
+4|Initial Gamespeed|training_wheels_initial_gamespeed|0|2
+4|Final Gamespeed|training_wheels_target_gamespeed|0|2
+4|Duration|training_wheels_duration|1|60
+0|Start|training_wheels_start
+7
+0|Stop|training_wheels_stop
