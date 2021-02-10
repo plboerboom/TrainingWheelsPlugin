@@ -32,7 +32,11 @@ void TrainingWheelsPlugin::onLoad()
 
 		this->IncrementGameSpeed();
 
-		}, "starts the plugin", PERMISSION_ALL);
+		}, "starts the change from initial to target values over duration", PERMISSION_ALL);
+
+	cvarManager->registerNotifier("training_wheels_pause", [this](std::vector<std::string> params) {
+		this->isPaused = true;
+		}, "pauses the changes", PERMISSION_ALL);
 }
 
 void TrainingWheelsPlugin::onUnload()
