@@ -10,7 +10,6 @@ private:
 	float duration;
 	float speedIncrement = 0.01f;
 	float period;
-	bool isPaused = false;
 	bool shouldStop = false;
 public:
 	virtual void onLoad();

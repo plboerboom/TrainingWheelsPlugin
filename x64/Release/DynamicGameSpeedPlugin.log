@@ -1,0 +1,9 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (DynamicGameSpeedPlugin.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  TrainingWheelsPlugin.cpp
+     Creating library C:\Users\plboe\source\repos\DynamicGameSpeedPlugin\x64\Release\TrainingWheelsPlugin.lib and object C:\Users\plboe\source\repos\DynamicGameSpeedPlugin\x64\Release\TrainingWheelsPlugin.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 280 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  DynamicGameSpeedPlugin.vcxproj -> C:\Users\plboe\source\repos\DynamicGameSpeedPlugin\x64\Release\TrainingWheelsPlugin.dll
+  C:/Users/plboe/AppData/Roaming/bakkesmod/bakkesmod/plugins/TrainingWheelsPlugin.dll

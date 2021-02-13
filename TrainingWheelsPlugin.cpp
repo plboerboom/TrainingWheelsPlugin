@@ -37,10 +37,6 @@ void TrainingWheelsPlugin::onLoad()
 	cvarManager->registerNotifier("training_wheels_stop", [this](std::vector<std::string> params) {
 		this->shouldStop = true;
 		}, "starts the change from initial to target values over duration", PERMISSION_ALL);
-
-	cvarManager->registerNotifier("training_wheels_pause", [this](std::vector<std::string> params) {
-		this->isPaused = !this->isPaused;
-		}, "toggles the paused state of training wheels", PERMISSION_ALL);
 }
 
 void TrainingWheelsPlugin::onUnload()
@@ -49,7 +45,7 @@ void TrainingWheelsPlugin::onUnload()
 
 void TrainingWheelsPlugin::IncrementGameSpeed()
 {
-	if (gameWrapper->IsPaused() || this->isPaused) {
+	if (gameWrapper->IsPaused()) {
 		gameWrapper->SetTimeout([this](GameWrapper* gw) {
 			this->IncrementGameSpeed();
 			}, this->period);
@@ -58,7 +54,7 @@ void TrainingWheelsPlugin::IncrementGameSpeed()
 
 	this->currentSpeed += this->speedIncrement;
 
-	if (this->shouldStop || this->currentSpeed > this->finalSpeed) {
+	if (gameWrapper->IsInOnlineGame() || this->shouldStop || this->currentSpeed > this->finalSpeed) {
 		return;
 	} 
 
